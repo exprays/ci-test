@@ -21,7 +21,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run Baseline Check
+      - name: Baseline Compatibility Check
         uses: exprays/greenlightci-action@v1.0.0
         with:
           baseline-year: "2023"
