@@ -21,10 +21,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run Baseline Check
-        uses: exprays/greenlightci-action@v1
+      - name: Baseline Compatibility Check
+        uses: exprays/greenlightci-action@v1.1
         with:
           baseline-year: "2023"
-          fail-on-newly-available: "true"
+          block-newly-available: true
           dashboard-url: ${{ secrets.DASHBOARD_URL }}
           dashboard-api-key: ${{ secrets.DASHBOARD_API_KEY }}
