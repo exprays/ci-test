@@ -1,0 +1,30 @@
+name: Baseline Compatibility Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+  statuses: write
+
+jobs:
+  baseline-check:
+    runs-on: ubuntu-latest
+    name: Check Baseline Compatibility
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Baseline Check
+        uses: exprays/greenlightci-action@v1
+        with:
+          baseline-year: "2023"
+          fail-on-newly-available: "true"
+          dashboard-url: ${{ secrets.DASHBOARD_URL }}
+          dashboard-api-key: ${{ secrets.DASHBOARD_API_KEY }}
