@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Baseline Compatibility Check
-        uses: exprays/greenlightci-action@v1.0.0
+        uses: exprays/greenlightci-action@v1
         with:
           baseline-year: "2023"
           fail-on-newly-available: "true"
