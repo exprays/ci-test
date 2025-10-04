@@ -25,6 +25,6 @@ jobs:
         uses: exprays/greenlightci-action@v1
         with:
           baseline-year: "2023"
-          fail-on-newly-available: "true"
+          block-newly-available: true
           dashboard-url: ${{ secrets.DASHBOARD_URL }}
           dashboard-api-key: ${{ secrets.DASHBOARD_API_KEY }}
