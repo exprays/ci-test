@@ -1,0 +1,3 @@
+/* CSS custom properties example */
+:root { --main-color: #06c; }
+a { color: var(--main-color); }

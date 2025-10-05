@@ -1,0 +1,2 @@
+/* :has() selector example */
+.list:has(.active) { background: yellow; }
