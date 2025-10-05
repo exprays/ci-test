@@ -1,0 +1,7 @@
+/* Container query example */
+.container {
+  container-type: inline-size;
+}
+@container (min-width: 500px) {
+  .item { color: blue; }
+}

@@ -1,0 +1,5 @@
+// SCSS nesting example
+.card {
+  &__header { font-weight: bold; }
+  &.active { color: green; }
+}
