@@ -6,7 +6,7 @@ export class DataManager {
     this.#privateField = [];
   }
 
-  // Array methods
+  // Array methods o
   findLastItem(predicate) {
     return this.#privateField.findLast(predicate); // Baseline 2023
   }
